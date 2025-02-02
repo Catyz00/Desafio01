@@ -166,6 +166,7 @@ footer a:hover {
         justify-content: center; /* Centraliza os ícones do rodapé */
         gap: 1rem; /* Ajusta o espaçamento entre os ícones */
         padding-right: 0;
+        top: auto; /* Remove o posicionamento fixo */
         position: absolute; /* Fixa o rodapé no fundo da tela */
         width: 100%;
     }
