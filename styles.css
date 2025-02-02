@@ -167,7 +167,6 @@ footer a:hover {
         gap: 1rem; /* Ajusta o espaçamento entre os ícones */
         padding-right: 0;
         position: absolute; /* Fixa o rodapé no fundo da tela */
-        bottom: 10px; /* Distância do rodapé da tela */
         width: 100%;
     }
 
