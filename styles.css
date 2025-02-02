@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Remove qualquer scroll */
+}
+
+html {
+    background-image: url(src/img/bg-desktop.svg);
+    background-color: hsl(257, 40%, 49%);
+}
+
+section {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh; /* Garantir que o container ocupe 100% da tela */
+    overflow: hidden; /* Previne rolagem */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem; /* Dá um espaçamento entre a imagem e o texto */
+    max-width: 1400px;
+    width: 100%;
+}
+
+.image img {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    max-width: 100%; /* Garante que a imagem seja responsiva */
+    height: auto;
+}
+
+.text {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+    gap: 0.3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    max-width: 600px;
+}
+
+.button {
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    padding: 1rem 3.5rem;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+}
+
+.button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: hsl(257, 40%, 49%);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espaçamento entre os ícones */
+    padding-right: 3rem;
+    position: fixed; /* Posiciona o footer fixo */
+    bottom: 0; /* Coloca no fundo da tela */
+    right: 0; /* Alinha à direita */
+    margin-bottom: 2rem; /* Ajusta a distância da parte inferior, se necessário */
+}
+
+footer a {
+    color: white; /* Cor dos ícones */
+    font-size: 2rem; /* Ajusta o tamanho */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: hsl(300, 69%, 71%); /* Muda a cor ao passar o mouse */
+}
+
+
+/* Media Queries para Responsividade */
+@media(max-width: 375px) {
+    html, body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden; /* Evita scroll horizontal */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
+        justify-content: flex-start; /* Ajusta para começar do topo */
+        align-items: center; /* Centraliza os itens */
+        padding: 1rem; /* Dá um pouco de espaçamento ao redor do conteúdo */
+        height: auto; /* Permite o scroll */
+        min-height: 100vh; /* Garantir que a tela ocupe toda a altura */
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column; /* Coloca a imagem e o texto em uma coluna */
+        gap: 1rem; /* Ajusta o espaçamento entre os itens */
+        text-align: center; /* Centraliza o texto */
+        width: 100%;
+    }
+
+    .image img {
+        max-width: 90%; /* Limita a largura da imagem em telas pequenas */
+        height: auto;
+    }
+
+    .text {
+        max-width: 90%; /* Diminui o tamanho máximo da largura do texto */
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Ajusta o tamanho do título */
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1rem; /* Ajusta o tamanho do parágrafo */
+        margin-bottom: 1rem;
+    }
+
+    .button {
+        width: 80%;
+        text-align: center;
+        padding-left: 2rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center; /* Centraliza os ícones do rodapé */
+        gap: 1rem; /* Ajusta o espaçamento entre os ícones */
+        padding-right: 0;
+        position: absolute; /* Fixa o rodapé no fundo da tela */
+        bottom: 10px; /* Distância do rodapé da tela */
+        width: 100%;
+    }
+
+    footer a {
+        font-size: 1.5rem; /* Diminui o tamanho dos ícones */
+    }
+}
+
+
